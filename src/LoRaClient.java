@@ -80,7 +80,7 @@ public class LoRaClient implements WebSocket.Listener {
                 decCo2=Integer.parseInt(hexCo2, 16);
                 int temperature = decTemperature/10;
                 int humidity = decHumidity/10;
-                int co2 = decCo2/10;
+                int co2 = decCo2;
                 mongoDB.insertNewData("measurements", temperature, humidity, co2);
             }
 
